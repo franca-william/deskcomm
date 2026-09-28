@@ -163,6 +163,23 @@
   .infra-box .label { font-size: 13px; font-weight: 700; color: var(--gray); margin-bottom: 4px; }
   .infra-box .value { font-size: 17px; color: #141414; }
   .fine-print { font-size: 14px; color: var(--gray-light); line-height: 1.5; }
+  .packages { display: flex; flex-wrap: wrap; gap: 22px; margin-bottom: 26px; }
+  .package {
+    flex: 1 1 280px; background: var(--white-2); border: 1px solid var(--border);
+    border-top: 5px solid var(--red); border-radius: 16px; padding: 30px 26px;
+    display: flex; flex-direction: column;
+  }
+  .pkg-label { font-family: var(--heading-font); font-weight: 700; font-size: 13px; letter-spacing: 0.08em; color: var(--red); margin-bottom: 10px; }
+  .package h3 { font-family: var(--heading-font); font-weight: 700; font-size: 20px; line-height: 1.25; margin: 0 0 14px; }
+  .pkg-price { font-family: var(--heading-font); font-weight: 700; font-size: 34px; color: #141414; margin-bottom: 18px; line-height: 1.1; }
+  .pkg-price span { font-family: var(--body-font); font-size: 15px; font-weight: 400; color: var(--gray); }
+  .package ul, .fair-use ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .package li, .fair-use li { font-size: 15px; color: #3A3A3A; padding-left: 18px; position: relative; line-height: 1.45; }
+  .package li::before, .fair-use li::before { content: ""; position: absolute; left: 0; top: 7px; width: 8px; height: 8px; border-radius: 2px; background: var(--red); }
+  .extras { font-size: 15px; color: #3A3A3A; margin: 0 0 26px; }
+  .fair-use { background: var(--white-2); border: 1px solid var(--border); border-radius: 16px; padding: 28px 30px; margin-bottom: 22px; }
+  .fair-use h3 { font-family: var(--heading-font); font-weight: 700; font-size: 20px; margin: 0 0 6px; }
+  .fair-use .fu-lead { font-size: 14px; color: var(--gray); margin: 0 0 16px; }
 
   /* ---------- FINAL CTA ---------- */
   .final-cta {
@@ -292,29 +309,56 @@
   <div class="wrap">
     <div class="section-label">INVESTIMENTO</div>
     <h2>Sem letra miúda</h2>
-    <table class="pricing-table">
-      <tr><th>Item</th><th>O que inclui</th><th>Valor</th></tr>
-      <tr>
-        <td class="item">Implantação<br>(pagamento único)</td>
-        <td>Setup, conexão do WhatsApp, treinamento da IA e da equipe</td>
-        <td class="val">R$ 1.500 – R$ 3.500<br><span style="font-weight:400; color:#6A6A6A; font-size:13px;">parcelável em até 3x</span></td>
-      </tr>
-      <tr>
-        <td class="item">Manutenção mensal</td>
-        <td>Atualizações, suporte, ajustes na IA, backup contínuo</td>
-        <td class="val">R$ 99,90/mês</td>
-      </tr>
-      <tr>
-        <td class="item">Busca de leads<br>(opcional)</td>
-        <td>Prospecção ativa com IA, leads entregues no seu funil</td>
-        <td class="val">Sob consulta</td>
-      </tr>
-    </table>
-    <div class="infra-grid">
-      <div class="infra-box"><div class="label">+ VPS (INFRAESTRUTURA)</div><div class="value">R$ 80 – R$ 150/mês</div></div>
-      <div class="infra-box"><div class="label">+ CRÉDITOS DE IA</div><div class="value">R$ 50 – R$ 300/mês, conforme volume</div></div>
+    <p class="lead" style="margin-bottom:32px;">Escolha o pacote pelo volume de respostas geradas pela IA. Em todos: implantação sem custo, infraestrutura e IA inclusas.</p>
+    <div class="packages">
+      <div class="package">
+        <div class="pkg-label">PACOTE 1</div>
+        <h3>Até 1.000 respostas de IA por mês</h3>
+        <div class="pkg-price">R$ 197,00<span> /mês</span></div>
+        <ul>
+          <li>Aprox. 100 a 150 conversas por mês</li>
+          <li>Implantação: R$ 0</li>
+          <li>Infraestrutura e IA inclusas</li>
+          <li>Atualizações, suporte e backup</li>
+        </ul>
+      </div>
+      <div class="package">
+        <div class="pkg-label">PACOTE 2</div>
+        <h3>Até 3.000 respostas de IA por mês</h3>
+        <div class="pkg-price">R$ 397,00<span> /mês</span></div>
+        <ul>
+          <li>Aprox. 300 a 450 conversas por mês</li>
+          <li>Implantação: R$ 0</li>
+          <li>Infraestrutura e IA inclusas</li>
+          <li>Atualizações, suporte e backup</li>
+        </ul>
+      </div>
+      <div class="package">
+        <div class="pkg-label">PACOTE 3</div>
+        <h3>Acima de 3.000 respostas de IA por mês</h3>
+        <div class="pkg-price">A combinar</div>
+        <ul>
+          <li>Preço definido conforme o seu volume</li>
+          <li>Implantação: R$ 0</li>
+          <li>Mesmas condições dos demais pacotes</li>
+          <li>Diagnóstico para dimensionar o atendimento</li>
+        </ul>
+      </div>
     </div>
-    <p class="fine-print">VPS e créditos de IA são contratados e pagos direto pelo cliente aos provedores — sem repasse ou markup. Primeiro mês de manutenção gratuito. Sem fidelidade mínima — cancelamento a qualquer momento.</p>
+    <p class="extras"><strong>Busca de leads qualificados (opcional):</strong> a combinar, em qualquer pacote.</p>
+    <div class="fair-use">
+      <h3>Política de uso justo</h3>
+      <p class="fu-lead">Para o serviço se manter estável e o preço se manter justo, valem estas regras:</p>
+      <ul>
+        <li>O limite conta apenas respostas geradas pela IA. Mensagens de atendentes, respostas rápidas, follow-ups de texto fixo e lembretes de agenda não contam.</li>
+        <li>Avisamos quando você chegar a 80% e a 100% do limite do pacote.</li>
+        <li>Passou do limite? Combinamos a migração para o pacote seguinte, sem interromper o seu atendimento de imediato.</li>
+        <li>Como proteção, se o uso passar de 3 vezes o limite do pacote, a IA passa a encaminhar os contatos para a sua equipe até o próximo ciclo.</li>
+        <li>Há um limite diário de respostas da IA por contato, para evitar loops entre robôs.</li>
+        <li>Cada plano atende um negócio e um número de WhatsApp. Revenda e disparos em massa exigem plano específico.</li>
+      </ul>
+    </div>
+    <p class="fine-print">Sem fidelidade mínima — cancelamento a qualquer momento.</p>
   </div>
 </section>
 
